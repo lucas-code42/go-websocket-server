@@ -1,8 +1,8 @@
-function textMsg() {
-    const ws = new WebSocket("ws://localhost:8080/ws-text");
-    ws.send("hello from web-socket");
-}
-textMsg();
+// function textMsg() {
+//     const ws = new WebSocket("ws://localhost:8080/ws-text");
+//     ws.send("hello from web-socket");
+// }
+// textMsg();
 
 function jsonMsg() {
     const ws = new WebSocket("ws://localhost:8080/ws-json?nickname=client-1");
