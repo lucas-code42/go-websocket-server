@@ -5,12 +5,13 @@ function textMsg() {
 textMsg();
 
 function jsonMsg() {
-    const ws = new WebSocket("ws://localhost:8080/ws-json");
+    const ws = new WebSocket("ws://localhost:8080/ws-json?nickname=client-1");
     ws.send(
         JSON.stringify({
-            protocol: "ws",
-            msg: "hello from ws client",
-            status: "open"
+            nickname: "client-1",
+            msg: "Hello",
+            target: "",
+            status: "online"
         })
     );
     ws.onmessage = function (event) { console.log(event.data) }
